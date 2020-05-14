@@ -89,7 +89,7 @@ const Dashboard: React.FC = () => {
       </Form>
       {inputError && <Error>{inputError}</Error>}
 
-      <Subtitle>
+      <Subtitle hasError={!!inputError}>
         Enter the address, city name (*with State, for more precision) or zip
         code to get the weather forecast
       </Subtitle>

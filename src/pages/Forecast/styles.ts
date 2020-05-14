@@ -1,10 +1,10 @@
 import styled, { css } from 'styled-components';
 
-interface FormProps {
+interface ErrorProps {
   hasError: boolean;
 }
 
-export const Form = styled.form<FormProps>`
+export const Form = styled.form<ErrorProps>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,8 +49,17 @@ export const Error = styled.span`
   width: 90%;
   margin: 1vh auto 2vh;
 `;
-export const Subtitle = styled.h2`
+export const Subtitle = styled.h2<ErrorProps>`
   text-align: center;
-  font-size: 1rem;
+  padding: 1vh 2vw;
+  font-size: 0.8rem;
   color: #8e8e8e;
+  width: max-content;
+  margin: 0 auto;
+  border-radius: 5px;
+  ${(props) =>
+    props.hasError &&
+    css`
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 8px;
+    `};
 `;
