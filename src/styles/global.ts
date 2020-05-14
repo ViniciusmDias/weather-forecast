@@ -11,7 +11,7 @@ export default createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
   body, input, button, a {
-    font: 10px 'Arimo', sans-serif;
+    font: 12px 'Arimo', sans-serif;
     letter-spacing: 0.5px;
     color: #3c3c3c;
   }
@@ -20,6 +20,7 @@ export default createGlobalStyle`
 
   }
   #root {
+    padding: 0 4vw;
     max-width: 960px;
     margin: 0 auto;
   }

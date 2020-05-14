@@ -7,6 +7,7 @@ interface WeatherProps {
   lat: number;
   long: number;
   city: string;
+  state: string;
 }
 
 interface Weathers {
@@ -18,7 +19,7 @@ interface Weathers {
   humidity: number;
 }
 
-const Weather: React.FC<WeatherProps> = ({ lat, long, city }) => {
+const Weather: React.FC<WeatherProps> = ({ lat, long, city, state }) => {
   const [weathers, setWeathers] = useState<Weathers[]>([]);
 
   useEffect(() => {
@@ -38,14 +39,14 @@ const Weather: React.FC<WeatherProps> = ({ lat, long, city }) => {
           .slice(0, 1)
           .map(
             (weather) =>
-              `${weather.weather[0].description} currently in ${city}. The temperature is ${weather.temp} °C`,
+              `${weather.weather[0].description} currently in ${city} of ${state}. The temperature is ${weather.temp} °C`,
           )}
       </h1>
       <div>
         <ul>
           <li></li>
           <li>Condition</li>
-          <li>Temp</li>
+          <li>Temperature</li>
           <li>Feels Like</li>
           <li>Humidity</li>
         </ul>
@@ -55,8 +56,9 @@ const Weather: React.FC<WeatherProps> = ({ lat, long, city }) => {
               {(weather.hour = new Date(weather.dt * 1000).getHours()) - 12 < 0
                 ? ((weather.hour = new Date(weather.dt * 1000).getHours()) -
                     12) *
-                  1
+                  -1
                 : (weather.hour = new Date(weather.dt * 1000).getHours()) - 12}
+
               {(weather.hour = new Date(weather.dt * 1000).getHours()) - 12 <
               0 ? (
                 <span>:00 am</span>

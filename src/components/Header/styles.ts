@@ -9,7 +9,6 @@ export const HeaderMenu = styled.header`
   margin-bottom: 6vh;
 
   @media (min-width: 760px) {
-    padding: 0 4vw;
     flex-direction: row;
     justify-content: space-between;
   }
