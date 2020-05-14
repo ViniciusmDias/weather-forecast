@@ -13,13 +13,15 @@ export const Container = styled.section`
   div {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+
     ul:nth-child(1) li {
       font-weight: 800;
       font-size: 1rem;
     }
     ul {
       display: flex;
+      flex-direction: column;
       list-style: none;
       justify-content: center;
       align-items: center;
@@ -29,7 +31,7 @@ export const Container = styled.section`
         justify-content: center;
         align-items: center;
         text-decoration: none;
-        width: 25vw;
+        width: 10vw;
         height: 10vh;
         font-weight: 700;
         font-size: 1rem;
