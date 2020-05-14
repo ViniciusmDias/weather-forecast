@@ -2,10 +2,17 @@ import styled from 'styled-components';
 
 export const HeaderMenu = styled.header`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: column;
   align-items: center;
   height: 90px;
   margin-bottom: 6vh;
+
+  @media (min-width: 760px) {
+    padding: 0 4vw;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   a {
     text-decoration: none;
     font-size: 2rem;
@@ -17,9 +24,14 @@ export const HeaderMenu = styled.header`
     opacity: 0.8;
   }
   div {
+    margin-top: 2vh;
+    @media (min-width: 760px) {
+      margin-top: 0;
+    }
     a {
       position: relative;
       color: #8e8e8e;
+      font-size: 1.5rem;
     }
     a.active {
       color: #3c3c3c;

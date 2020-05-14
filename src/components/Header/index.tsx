@@ -1,19 +1,17 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { HeaderMenu } from './styles';
 
 const Header: React.FC = () => {
   return (
     <HeaderMenu>
-      <NavLink to="/">OnSign TV</NavLink>
+      <Link to="/">OnSign TV</Link>
       <div>
-        <NavLink activeClassName="active" exact to="/">
+        <Link className="active" to="/">
           Forecast
-        </NavLink>
-        <NavLink activeClassName="active" exact to="/about">
-          About
-        </NavLink>
+        </Link>
+        <a href="https://viniciusdias.works/">About</a>
       </div>
     </HeaderMenu>
   );

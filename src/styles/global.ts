@@ -10,10 +10,14 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  body, input, button {
-    font: 14px Arimo, sans-serif;
+  body, input, button, a {
+    font: 10px 'Arimo', sans-serif;
     letter-spacing: 0.5px;
     color: #3c3c3c;
+  }
+  @media (min-width: 760px) {
+    font-size: 14px;
+
   }
   #root {
     max-width: 960px;

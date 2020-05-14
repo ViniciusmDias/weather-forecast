@@ -10,6 +10,9 @@ export const Container = styled.section`
     font-size: 1.6rem;
     margin-bottom: 2vh;
   }
+  h1::first-letter {
+    text-transform: uppercase;
+  }
   div {
     width: 100%;
     display: flex;
@@ -36,6 +39,7 @@ export const Container = styled.section`
         font-weight: 700;
         font-size: 1rem;
       }
+
       li + li {
         font-weight: 400;
         font-size: 0.8rem;
