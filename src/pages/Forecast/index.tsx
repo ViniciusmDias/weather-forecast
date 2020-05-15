@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
 import Header from '../../components/Header';
-
 import Weather from '../../components/Weather';
 
-import api from 'axios';
-
 import { FaLocationArrow, FaSearchLocation } from 'react-icons/fa';
-
 import { Form, Subtitle, Error } from './styles';
+
+import api from 'axios';
 
 const Dashboard: React.FC = () => {
   const [inputError, setInputError] = useState('');
@@ -20,6 +18,7 @@ const Dashboard: React.FC = () => {
 
   const [input, setInput] = useState('');
 
+  /* map request when location is allowed */
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(function (position) {
       try {
@@ -28,12 +27,13 @@ const Dashboard: React.FC = () => {
             `https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.coords.latitude},${position.coords.longitude}&key=AIzaSyD6rKc6URJVJv5GNgNydJxd19jitau6pg0`,
           )
           .then((response) => {
+            console.log(response.data.results[0]);
             response.data.results[0].address_components.map((rep: any) => {
               rep.types.includes('administrative_area_level_2') &&
                 setCity(rep.long_name);
               rep.types.includes('administrative_area_level_1') &&
                 setState(rep.short_name);
-              return console.log('Maps api connected');
+              return console.log('Addresses founds');
             });
             setLatitude(response.data.results[0].geometry.location.lat);
             setLongitude(response.data.results[0].geometry.location.lng);
@@ -46,6 +46,7 @@ const Dashboard: React.FC = () => {
     });
   }, []);
 
+  /* map geolocation request when input is clicked */
   async function searchLocation(e: any, input: string) {
     e.preventDefault();
     if (!input) {
@@ -56,13 +57,14 @@ const Dashboard: React.FC = () => {
     const response = await api.get(
       `https://maps.googleapis.com/maps/api/geocode/json?address=${input}&key=AIzaSyD6rKc6URJVJv5GNgNydJxd19jitau6pg0`,
     );
-    console.log(response.data.results[0]);
+
+    /* data processing for request response */
     response.data.results[0].address_components.map((rep: any) => {
       rep.types.includes('administrative_area_level_2') &&
         setCity(rep.long_name);
       rep.types.includes('administrative_area_level_1') &&
         setState(rep.short_name);
-      return console.log('Maps api connected!');
+      return console.log('Addresses founds');
     });
     setLatitude(response.data.results[0].geometry.location.lat);
     setLongitude(response.data.results[0].geometry.location.lng);

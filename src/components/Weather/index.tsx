@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
 import { Container } from './styles';
-import { weatherApi } from '../../services/api';
+
+import api from 'axios';
 
 interface WeatherProps {
   lat: number;
@@ -22,12 +23,13 @@ interface Weathers {
 const Weather: React.FC<WeatherProps> = ({ lat, long, city, state }) => {
   const [weathers, setWeathers] = useState<Weathers[]>([]);
 
+  /*Request when input is clicked*/
   useEffect(() => {
-    weatherApi
+    api
       .get(
         `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=minutely,daily&units=metric&appid=52219e46da1db33cf0ad6c6b4cb4d908`,
       )
-      .then((response) => {
+      .then((response: any) => {
         setWeathers(response.data.hourly.slice(0, 6));
       });
   }, [lat, long]);
@@ -50,8 +52,10 @@ const Weather: React.FC<WeatherProps> = ({ lat, long, city, state }) => {
           <li>Feels Like</li>
           <li>Humidity</li>
         </ul>
+
         {weathers.map((weather) => (
           <ul key={weather.dt}>
+            {/* Am/Pm logical */}
             <li>
               {(weather.hour = new Date(weather.dt * 1000).getHours()) - 12 < 0
                 ? ((weather.hour = new Date(weather.dt * 1000).getHours()) -

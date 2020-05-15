@@ -1,44 +1,114 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3 align="center">
+  Front End Programming Test by: OnSign TV
+  Project Name: Wheater Forecast
+  Resolved by: Vinicius Dias
+</h3>
 
-## Available Scripts
+<p align="center">
+  <a aria-label="Node version" href="https://nodejs.org/en/blog/release/v12.16.3/">
+    <img src="https://img.shields.io/badge/node.js@lts-12.14.1-informational?logo=Node.JS"></img>
+  </a>
+  <a aria-label="React version" href="https://github.com/facebook/react/blob/master/CHANGELOG.md#16131-march-19-2020">
+    <img src="https://img.shields.io/badge/react-16.12.0-informational?logo=react"></img>
+  </a>
+  <a aria-label="Typescript version" href="https://www.npmjs.com/package/typescript/v/3.7.2">
+    <img src="https://img.shields.io/npm/types/typescript"></img>
+  </a>
+  <a aria-label="Finished" href="https://rocketseat.com.br/week/aulas/11.0?aula=5">
+    <img src="https://img.shields.io/badge/OnSignTV-done-green"></img>
+  </a>
+</p>
 
-In the project directory, you can run:
+## :sparkles: About Challenge
 
-### `yarn start`
+Your goal is to create a simple web application that allows users to view the temperature forecast for the next six hours at agiven location.
+This application can be developed using your preferred JS Framework or just plain and simple
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Javascript. React and Vue.js areour personal preference, but rest assured that you'll NOT be evaluated by choice of Framework. All code must be writtenexclusively in english. You don't have to add automated tests, but adding some comments and documentation would be nice.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+We will be evaluating how you architect the solution, how you handle errors from both user input and external APIs, as well ashow efficient your solution is.
 
-### `yarn test`
+If you want to add an external library or other type of dependency, please write some comments explaining why you believe it isnecessary.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Don't worry about how this would be deployed, as long as we can run it somehow. A README file with instructions isappreciated.
 
-### `yarn build`
+### Development
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- In the root directory (/weather-forecast) of the project, install all the necessary libraries for development with the command:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+```js
+  yarn install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- In the root directory (/weather-forecast) of the project, start the application in development mode at [localhost](http://localhost:3000) with the command:
 
-### `yarn eject`
+```js
+  yarn start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Tech Introduction
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Desenvolvido utilizando os padrões do Typescript dentro do React (create-react-app);
+- Foi utilizado as bibliotecas EsLint e Prettier para identação e um melhor debug do código;
+- Fonte usada: Arimo, pela semelhança com a Helvetica Hue, encontrada no site da OnSignTV;
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Basic Template
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Create the project with create-react-app;
 
-## Learn More
+```js
+  create-react-app weather-forecast --template=typescript
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Added Libraries
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Added the Eslint libraty to project in development mode:
+
+```js
+  yarn add eslint -D
+```
+
+- Added the following library in the development version, to import typescript by default:
+
+```js
+  yarn add eslint-import-resolver-typescript -D
+```
+
+- Added the Prettier library to the project in development mode:
+
+```js
+  yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
+```
+
+- Added the Styled Components library to stylized the aplication:
+
+```js
+  yarn add styled-components
+```
+
+- Added the Axios library to HTTP request's:
+
+```js
+  yarn add axios
+```
+
+- Added the React Icons library to use some icons:
+
+```js
+  yarn add react-icons
+```
+
+#### Project Structure
+
+The project contains the following folders
+
+./src
+
+- /components => Reusable application components;
+- /pages => Application pages;
+- /routes => Application routes;
+- /styles => Global styles of aplication;
+
+---
+
+Some comments have been added to the code to improve understanding;

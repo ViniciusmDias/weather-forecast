@@ -33,6 +33,8 @@ export const Form = styled.form<ErrorProps>`
     height: 50px;
     flex: 1;
     border: 2px solid #8e8e8e;
+
+    /* add this css when the element has the hasError property */
     ${(props) =>
       props.hasError &&
       css`
@@ -57,6 +59,7 @@ export const Subtitle = styled.h2<ErrorProps>`
   width: 100%;
   margin: 0 auto;
   border-radius: 5px;
+
   ${(props) =>
     props.hasError &&
     css`
