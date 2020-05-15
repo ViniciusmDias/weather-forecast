@@ -1,8 +1,12 @@
-<h3 align="center">
-  Front End Programming Test by: OnSign TV
-  Project Name: Wheater Forecast
-  Resolved by: Vinicius Dias
+<p>
+  Front End Programming Test by: <strong>OnSign TV</strong>
 </h3>
+<p>
+  Project Name: <strong>Wheater Forecast</strong>
+</p>
+<p>
+  Resolved by: <strong>Vinicius Dias</strong>
+</p>
 
 <p align="center">
   <a aria-label="Node version" href="https://nodejs.org/en/blog/release/v12.16.3/">
