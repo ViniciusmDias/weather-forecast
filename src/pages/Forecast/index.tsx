@@ -52,6 +52,7 @@ const Dashboard: React.FC = () => {
       setInputError('Type city name or zip code in box text above to continue');
       return;
     }
+
     const response = await api.get(
       `https://maps.googleapis.com/maps/api/geocode/json?address=${input}&key=AIzaSyD6rKc6URJVJv5GNgNydJxd19jitau6pg0`,
     );
@@ -64,6 +65,7 @@ const Dashboard: React.FC = () => {
     });
     setLatitude(response.data.results[0].geometry.location.lat);
     setLongitude(response.data.results[0].geometry.location.lng);
+    setInputError('');
   }
 
   return (

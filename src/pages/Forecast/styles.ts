@@ -54,7 +54,7 @@ export const Subtitle = styled.h2<ErrorProps>`
   padding: 1vh 2vw;
   font-size: 0.8rem;
   color: #8e8e8e;
-  width: max-content;
+  width: 100%;
   margin: 0 auto;
   border-radius: 5px;
   ${(props) =>
