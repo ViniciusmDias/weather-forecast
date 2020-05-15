@@ -39,7 +39,7 @@ const Weather: React.FC<WeatherProps> = ({ lat, long, city, state }) => {
           .slice(0, 1)
           .map(
             (weather) =>
-              `${weather.weather[0].description} currently in ${city} of ${state}. The temperature is ${weather.temp} °C`,
+              `${weather.weather[0].description} currently in ${city} in ${state}. The temperature is ${weather.temp} °C`,
           )}
       </h1>
       <div>
