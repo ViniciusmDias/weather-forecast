@@ -12,7 +12,7 @@
     <img src="https://img.shields.io/badge/react-16.12.0-informational?logo=react"></img>
   </a>
   <a aria-label="Typescript version" href="https://www.npmjs.com/package/typescript/v/3.7.2">
-    <img src="https://img.shields.io/npm/types/typescript"></img>
+    <img src="https://img.shields.io/badge/typescript-3.7.2-blue-informational?logo=typescript"></img>
   </a>
   <a aria-label="Finished" href="https://rocketseat.com.br/week/aulas/11.0?aula=5">
     <img src="https://img.shields.io/badge/OnSignTV-done-green"></img>
