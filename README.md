@@ -1,7 +1,5 @@
 <h3 align="center">
-  Front End Programming Test by: OnSign TV
-  Project Name: Wheater Forecast
-  Resolved by: Vinicius Dias
+  Front End Programming Test by: <strong>OnSign TV</strong>
 </h3>
 
 <p align="center">
@@ -17,6 +15,13 @@
   <a aria-label="Finished" href="https://rocketseat.com.br/week/aulas/11.0?aula=5">
     <img src="https://img.shields.io/badge/OnSignTV-done-green"></img>
   </a>
+</p>
+
+<p>
+  Project Name: <strong>Wheater Forecast</strong>
+</p>
+<p>
+  Resolved by: <strong>Vinicius Dias</strong>
 </p>
 
 ## :sparkles: About Challenge
