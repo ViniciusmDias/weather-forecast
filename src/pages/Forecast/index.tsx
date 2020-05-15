@@ -33,7 +33,7 @@ const Dashboard: React.FC = () => {
                 setCity(rep.long_name);
               rep.types.includes('administrative_area_level_1') &&
                 setState(rep.short_name);
-              return;
+              return console.log('Maps api connected');
             });
             setLatitude(response.data.results[0].geometry.location.lat);
             setLongitude(response.data.results[0].geometry.location.lng);
@@ -41,7 +41,7 @@ const Dashboard: React.FC = () => {
             setInputError('');
           });
       } catch (err) {
-        setInputError('Erro na busca por esse repositório');
+        setInputError('Error in search for location');
       }
     });
   }, []);
@@ -62,6 +62,7 @@ const Dashboard: React.FC = () => {
         setCity(rep.long_name);
       rep.types.includes('administrative_area_level_1') &&
         setState(rep.short_name);
+      return console.log('Maps api connected!');
     });
     setLatitude(response.data.results[0].geometry.location.lat);
     setLongitude(response.data.results[0].geometry.location.lng);

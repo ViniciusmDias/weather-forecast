@@ -30,7 +30,7 @@ const Weather: React.FC<WeatherProps> = ({ lat, long, city, state }) => {
       .then((response) => {
         setWeathers(response.data.hourly.slice(0, 6));
       });
-  }, [lat]);
+  }, [lat, long]);
 
   return (
     <Container>
@@ -67,7 +67,8 @@ const Weather: React.FC<WeatherProps> = ({ lat, long, city, state }) => {
               )}
             </li>
             <img
-              src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+              src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+              alt="Weather icons based on temperature"
             />
             <li>{weather.temp} °C</li>
             <li>{weather.feels_like} °C</li>
