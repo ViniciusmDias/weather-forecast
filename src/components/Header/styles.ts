@@ -5,14 +5,16 @@ export const HeaderMenu = styled.header`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: 90px;
+  height: 110px;
   margin-bottom: 6vh;
 
   @media (min-width: 760px) {
+    height: 80px;
     flex-direction: row;
     justify-content: space-between;
   }
   a {
+    padding: 2vh;
     text-decoration: none;
     font-size: 2rem;
     font-weight: 800;
@@ -23,7 +25,6 @@ export const HeaderMenu = styled.header`
     opacity: 0.8;
   }
   div {
-    margin-top: 2vh;
     @media (min-width: 760px) {
       margin-top: 0;
     }

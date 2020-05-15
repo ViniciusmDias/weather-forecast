@@ -8,7 +8,7 @@ export const Form = styled.form<ErrorProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 100%;
   height: 50px;
   margin: 6vh auto 2vh;
 
