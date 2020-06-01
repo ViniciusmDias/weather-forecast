@@ -6,7 +6,7 @@ import { HeaderMenu } from './styles';
 const Header: React.FC = () => {
   return (
     <HeaderMenu>
-      <Link to="/">OnSign TV</Link>
+      <Link to="/">Weather Forecast</Link>
       <div>
         <Link className="active" to="/">
           Forecast
