@@ -1,5 +1,5 @@
 <h3 align="center">
-  Front End Programming Test by: <strong>OnSign TV</strong>
+  Weather Forecast</strong>
 </h3>
 
 <p align="center">
@@ -12,30 +12,11 @@
   <a aria-label="Typescript version" href="https://www.npmjs.com/package/typescript/v/3.7.2">
     <img src="https://img.shields.io/badge/typescript-3.7.2-blue-informational?logo=typescript"></img>
   </a>
-  <a aria-label="Finished" href="https://rocketseat.com.br/week/aulas/11.0?aula=5">
-    <img src="https://img.shields.io/badge/OnSignTV-done-green"></img>
-  </a>
 </p>
 
 <p>
   Project Name: <strong>Wheater Forecast</strong>
 </p>
-<p>
-  Resolved by: <strong>Vinicius Dias</strong>
-</p>
-
-## :sparkles: About Challenge
-
-Your goal is to create a simple web application that allows users to view the temperature forecast for the next six hours at agiven location.
-This application can be developed using your preferred JS Framework or just plain and simple
-
-Javascript. React and Vue.js areour personal preference, but rest assured that you'll NOT be evaluated by choice of Framework. All code must be writtenexclusively in english. You don't have to add automated tests, but adding some comments and documentation would be nice.
-
-We will be evaluating how you architect the solution, how you handle errors from both user input and external APIs, as well ashow efficient your solution is.
-
-If you want to add an external library or other type of dependency, please write some comments explaining why you believe it isnecessary.
-
-Don't worry about how this would be deployed, as long as we can run it somehow. A README file with instructions isappreciated.
 
 ### Development
 
@@ -51,11 +32,10 @@ Don't worry about how this would be deployed, as long as we can run it somehow. 
   yarn start
 ```
 
-### Tech Introduction
+### :sparkles: Tech Introduction
 
-- Desenvolvido utilizando os padrões do Typescript dentro do React (create-react-app);
-- Foi utilizado as bibliotecas EsLint e Prettier para identação e um melhor debug do código;
-- Fonte usada: Arimo, pela semelhança com a Helvetica Hue, encontrada no site da OnSignTV;
+- Developed using Typescript standards within React (create-react-app);
+- The EsLint and Prettier libraries were used for identification and a better debugging of the code;
 
 #### Basic Template
 
